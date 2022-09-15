@@ -3,8 +3,6 @@
 A password input field with a visibility toggle button. Designed to be compatible
 with password auto-fill extensions.
 
-![](./video-demo.mov)
-
 ## Installation
 
 Simply include the `PasswordVisibility.js` script on your webpage
