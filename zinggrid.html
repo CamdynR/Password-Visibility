@@ -30,9 +30,7 @@
 					header="Employee Name"
 					type="custom"
 				>
-					<template>
-						<strong>[[index.lastName]]</strong>, [[index.firstName]]
-					</template>
+					<template> [[index.lastName]], [[index.firstName]] </template>
 				</zg-column>
 				<zg-column index="email" header="Email" type="email"></zg-column>
 				<zg-column
@@ -44,10 +42,10 @@
 			<zg-data
 				data='
 					[{
-						"firstName" : "Donald",
-						"lastName" : "Trump",
-						"email" : "potus@whitehouse.gov",
-						"password" : "Bigly",
+						"firstName" : "Darth",
+						"lastName" : "Vader",
+						"email" : "lordvader@deathstar.gov",
+						"password" : "Padme4Ever",
 						"employeeId" : 3
 					},
 					{
@@ -63,8 +61,7 @@
 						"email" : "donald.duck@disney.com",
 						"password" : "Bigly",
 						"employeeId" : 1
-					}
-				]'
+					}]'
 			></zg-data>
 		</zing-grid>
 		<h2>With Component</h2>
@@ -88,10 +85,10 @@
 			<zg-data
 				data='
 					[{
-						"firstName" : "Donald",
-						"lastName" : "Trump",
-						"email" : "potus@whitehouse.gov",
-						"password" : "Bigly",
+						"firstName" : "Darth",
+						"lastName" : "Vader",
+						"email" : "lordvader@deathstar.gov",
+						"password" : "Padme4Ever",
 						"employeeId" : 3
 					},
 					{
@@ -107,13 +104,12 @@
 						"email" : "donald.duck@disney.com",
 						"password" : "Bigly",
 						"employeeId" : 1
-					}
-				]'
+					}]'
 			></zg-data>
 		</zing-grid>
 		<script type="module">
 			function pvRenderer(pw, cellRef, $cell) {
-				return pw.replace(/./g, '-');
+				return pw.replace(/./g, '*');
 			}
 
 			let editor = {
@@ -126,6 +122,7 @@
 							name="password"
 							id="password"
 							slot="password"
+							spellcheck="false"
 						/>
 					`;
 					editorField.appendChild(oDOMInput);
